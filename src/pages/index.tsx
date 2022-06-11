@@ -27,11 +27,13 @@ const Home: NextPage = () => {
 			<div className="p-2" />
 			<div className="border rounded p-8 flex justify-between max-w-2xl items-center">
 				<div className="w-64 h-64 flex flex-col items-center">
-					<img
-						src={firstPokemon.data?.sprites.front_default}
-						alt="first"
-						className="w-full mt-[-2rem]"
-					/>
+					{firstPokemon && (
+						<img
+							src={firstPokemon.data?.sprites.front_default!}
+							alt="first"
+							className="w-full mt-[-2rem]"
+						/>
+					)}
 					<div className="text-xl text-center capitalize mt-[-1rem]">
 						{firstPokemon.data?.name}
 					</div>
@@ -41,11 +43,13 @@ const Home: NextPage = () => {
 				</div>
 				<div className="p-8">Vs</div>
 				<div className="w-64 h-64 flex flex-col items-center">
-					<img
-						src={secondPokemon.data?.sprites.front_default}
-						alt="second"
-						className="w-full mt-[-2rem]"
-					/>
+					{secondPokemon && (
+						<img
+							src={secondPokemon.data?.sprites.front_default!}
+							alt="second"
+							className="w-full mt-[-2rem]"
+						/>
+					)}
 					<div className="text-xl text-center capitalize mt-[-1rem]">
 						{secondPokemon.data?.name}
 					</div>
